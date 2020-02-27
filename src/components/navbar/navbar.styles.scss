@@ -1,0 +1,39 @@
+$default: #000;
+$twitter: #55ACEE;
+$github: rgb(165, 165, 165);
+$instagram: #833ab4;
+
+@mixin hover-social {
+    
+    &:hover {
+        opacity: 0.9;
+        transition: color .15s ease-in;
+        color: $twitter;
+        text-decoration: none;
+    }
+}
+
+.fa { 
+    width: 50px;
+    text-align: center;
+    margin: 10px 20px;
+    font-size: 40px;
+  
+    @include hover-social
+}
+
+.instagram {
+    @include hover-social;
+
+    &:hover {
+        color: $instagram;
+    }
+}
+
+.github {
+    @include hover-social;
+
+    &:hover {
+        color: $github;
+    }
+}
